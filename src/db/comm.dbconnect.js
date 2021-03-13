@@ -39,7 +39,7 @@ class DBConnection {
     }
 
     // creating a query function for executing prepared statements
-    query = async (sql, values) => {
+    query = async (sql, ...values) => {
         return new Promise((resolve, reject) => {
             const callback = (err, results) => {
                 if(err){
